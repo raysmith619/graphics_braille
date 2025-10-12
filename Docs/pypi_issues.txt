@@ -1,0 +1,37 @@
+
+
+
+
+
+
+C:\Users\raysm\vscode\testing>py
+Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import graphics_braille
+>>> import graphics_braille.x_show_square_loop_colors_braille
+Removing: c:\Users\raysm\vscode\resource_lib\src
+Removing: c:\Users\Owner\OneDrive\Desktop\intro_2024b\resource_lib\src
+sys.path:
+
+    c:\Users\raysm\vscode\simple_games\dots-master\src
+    C:\Users\raysm\vscode\testing
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\python313.zip
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\DLLs
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32\lib
+    C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\Pythonwin
+Traceback (most recent call last):
+  File "<python-input-1>", line 1, in <module>
+    import graphics_braille.x_show_square_loop_colors_braille
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\x_show_square_loop_colors_braille.py", line 26, in <module>
+    from wx_turtle_braille import *                  # Get braille
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'wx_turtle_braille'
+>>>
+
+Adding directory, where python files are sourced, to environment
+variable PYTHONPATH avoids the above problem:
+C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille

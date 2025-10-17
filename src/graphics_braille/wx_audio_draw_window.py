@@ -488,6 +488,8 @@ class AudioDrawWindow(wx.Frame):
         """
         if self.id_title is not None:
             id_title = self.id_title
+        else:
+            id_title = "???"
         SlTrace.lg(f"print_braille: {id_title = }")
         if title is None:
             title = self.title

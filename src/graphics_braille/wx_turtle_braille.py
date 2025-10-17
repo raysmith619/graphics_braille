@@ -73,7 +73,7 @@ def setup_main(title=None, port=None):
     id_title = id_title.replace(" ", "_")
     title = id_title.replace(" ", "_")
     SlTrace.lg(f"setup_main: {id_title = }")
-    pdisplay = subprocess.Popen(f"python wx_display_main.py"
+    pdisplay = subprocess.Popen(f"py wx_display_main.py"
                                 f" --id_title {id_title}"
                                 f" --title {title}"
                                 f" --host_port={tkh.host_port}"

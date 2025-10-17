@@ -17,6 +17,8 @@ import wx
 import time
 import datetime
 
+import add_src_dir      # Insure site directory path is in sys.path
+
 from select_trace import SlTrace
 from wx_speaker_control import SpeakerControlLocal
 from braille_cell import BrailleCell

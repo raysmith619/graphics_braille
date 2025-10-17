@@ -7,14 +7,45 @@ This "text picture" is also placed in the Window clipboard to aid in placing the
 * The audio-draw-window supports many keyboard window positioning options, which give audio feedback of the current cursor position. The audio feedback user controlled - spoken text or audio tones.
 * The audio-draw-window supports the production of additional windows presenting magnifications of window selections.  
 
-## Graphics Braille setup from GitHub
-* Create braille_xxxx e.g. on Desktop
-* copy raysmith619/resource_lib/src to braille_xxxx/resource_lib_proj
-* pip install wxpython for wxPython - better graphics feedback for the blind
-* pip install pysinewave for pitch utilities
-* pip install pyttsx3 for speech support
-* pip install sounddevice for tones
-* run braille_xxxx/resource_lib_proj/square_loop_colors.py as an example  
+## Setup (MS Windows)
+* pip install from PyPI
+  * TestPyPI
+    ```
+    py -m pip install --extra-index-url https://test.pypi.org/simple/ graphics-braille==0.1.29.dev1
+    ```
+
+  * Standard
+  ```
+  py -m pip install graphics-braille
+  ``` 
+### Installation test (MS Windows)
+Enter the following cmd in a cmd window:
+```
+py graphics_braille.x_show_square_loop_colors_braille
+```
+In a handfull of seconds the following view should present on the screen.  If audio is working, one should hear something like "green at row 14 column 20".
+
+### graphics_braille test Screenshot
+![graphics_braille test Screenshot](Docs/graphics_braille_test_screenshot.png)
+
+### Virtual Environment (venv)
+It's **optional**, but we us it. It's no so hard.
+As of python3 venv is a standard module and need
+not be installed.  Create the environment,
+activate the environment, do your stuff, and
+when done, deactivate.
+
+
+Creating virtual environment
+```
+python -m venv venv
+venv\Scripts\activate
+```
+Leaving environment
+```
+deactivate
+``` 
+
 ## Notable text picture modifications
 These changes were the results of experiences with and comments from some 8th grade students at the Perkins School for the Blind.
 

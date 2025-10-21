@@ -66,6 +66,30 @@ File:__main__.py__Date:2025-10-16_15:51__User:Owner
 ,,ggyyyyyy
 
 
+Test program shutdown:
+
+
+ fte.pgm_exit
+ BrailleDisplay.exit
+onexit
+ Program duration: 962.771 sec
+Executing save_propfile
+ Saving properties file  c:\Users\raysm\vscode\resource_lib\wx_display_main.properties  20251016_160720
+ Closing log file c:\Users\raysm\vscode\resource_lib\log\wx_display_main_20251016_155118.sllog
+ ! Client ('127.0.0.1', 55554) disconnected.
+ Subprocess exited with rc:0
+onexit
+ Program duration: 968.423 sec
+Executing save_propfile
+ Saving properties file  c:\Users\raysm\vscode\testing\.properties.properties  20251016_160721
+ 20251016_160721_344 Closing log file c:\Users\raysm\vscode\testing\log\_20251016_155114.sllog
+
+(venv) c:\Users\raysm\vscode\testing>
+
+
+
+
+
 Previous failures:
 
 It may take a few seconds for the new package to become available to import.

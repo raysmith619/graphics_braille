@@ -1,6 +1,12 @@
 graphics_braille_install_test.txt
 
-(.venv) C:\Users\raysm\vscode\testing>py -m pip --no-cache-dir install --force-reinstall -i https://test.pypi.org/simple graphics_braille==0.1.15
+cd C:\Users\raysm\vscode\testing
+
+py -m venv venv
+venv\Scripts\Activate
+
+
+py -m pip --no-cache-dir install  --extra-index-url https://test.pypi.org/simple graphics_braille==0.1.25.dev1
 
 
 pip upgrade:

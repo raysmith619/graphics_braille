@@ -1,8 +1,10 @@
+graphics_braille_test_run.txt
+
 cd c:\Users\raysm\vscode\testing
 py -m venv venv
 venv\Scripts\activate
 
-py -m x_show_square_loop_colors_braille
+py -m graphics_braille.x_show_square_loop_colors_braille
 
 
 

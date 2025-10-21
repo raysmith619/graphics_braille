@@ -1,1 +1,12 @@
+# graphics_braille.yml
+    name: No-Op PyPI Workflow
+    on:
+      # This workflow will run manually
+      workflow_dispatch:
 
+    jobs:
+      do_nothing:
+        runs-on:   windows-latest
+        steps:
+          - name: Just a placeholder
+            run: echo "This workflow does nothing."

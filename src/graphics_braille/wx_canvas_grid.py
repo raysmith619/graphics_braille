@@ -497,10 +497,11 @@ class CanvasGrid(tk.Canvas):
         if ex_tags is not None:
             if not isinstance(ex_tags, list):
                 ex_tags = [ex_tags]
-        
+        ''' # Force silence
         SlTrace.lg(f"get_canvas_items"
                    f" xmin={xmin}, xmax={xmax}, ymin={ymin}, ymax={ymax}",
                    "canvas_items")
+        '''
         for ix in range(len(xs)):
             for iy in range(len(ys)):
                 cx1,cy1,cx2,cy2 = self.get_grid_ullr(ix=ix, iy=iy, xs=xs, ys=ys)

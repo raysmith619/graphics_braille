@@ -4,14 +4,16 @@
 import sys
 import os
 
-print(f"Initial sys.path:\n    {"\n    ".join(sys.path)}")
+path_list = "\n    ".join(sys.path)
+print(f"""Initial sys.path:\n    {path_list}""")
 src_file = os.path.abspath(__file__)
 print(f"add_src_dir file: {src_file}")
 src_path = os.path.dirname(src_file)
 if src_path not in sys.path:
     print(f"Inserting source directory {src_path}")
     sys.path.insert(0, src_path)
-    print(f"sys.path:\n    {"\n    ".join(sys.path)}")
+    path_list = "\n    ".join(sys.path)
+    print(f"sys.path:\n    {path_list}")
 
 file_dir = os.path.dirname(__file__)
 def remove_path_ending(ending=None):
@@ -35,10 +37,16 @@ if len(sys.argv) > 1:
     hack_dir = r"c:\Users\raysm\vscode\testing\venv\Lib\site-packages\graphics_braille"
     print(f"adding: {hack_dir}")
     sys.path.append(hack_dir)
-print(f"sys.path:\n    {"\n    ".join(sys.path)}")
+path_list = "\n    ".join(sys.path)
+print("clearFlags -  to minimize trace")
+import graphics_braille
+from graphics_braille.select_trace import SlTrace
+
+print(f"Final sys.path:\n    {path_list}")
 ##from turtle import *		     # Get standard stuff
 from wx_turtle_braille import *		     # Get braille
 
+SlTrace.clearFlags()
 colors = ["red","orange","yellow","green"]
 
 for colr in colors:

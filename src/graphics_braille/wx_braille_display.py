@@ -17,17 +17,17 @@ import wx
 import time
 import datetime
 
-import add_src_dir      # Insure site directory path is in sys.path
-
-from select_trace import SlTrace
-from wx_speaker_control import SpeakerControlLocal
-from braille_cell import BrailleCell
-from tk_canvas_grid import TkCanvasGrid
-from magnify_info import MagnifyInfo
-from wx_audio_draw_window import AudioDrawWindow
-from braille_error import BrailleError
-from wx_tk_rpc_user import TkRPCUser
-from wx_braille_cell_list import BrailleCellList
+###mport add_src_dir      # Insure site directory path is in sys.path
+import graphics_braille
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_speaker_control import SpeakerControlLocal
+from graphics_braille.braille_cell import BrailleCell
+from graphics_braille.tk_canvas_grid import TkCanvasGrid
+from graphics_braille.magnify_info import MagnifyInfo
+from graphics_braille.wx_audio_draw_window import AudioDrawWindow
+from graphics_braille.braille_error import BrailleError
+from graphics_braille.wx_tk_rpc_user import TkRPCUser
+from graphics_braille.wx_braille_cell_list import BrailleCellList
         
 class BrailleDisplay:
     """ Create and display graphics using Braille

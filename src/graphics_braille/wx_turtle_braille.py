@@ -25,10 +25,10 @@ import tkinter as tk
 import turtle as tur
 from turtle import *
 
-from wx_tk_rpc_host import TkRPCHost
-from select_trace import SlTrace
-from wx_canvas_grid import CanvasGrid
-from wx_braille_cell_list import BrailleCellList
+from graphics_braille.wx_tk_rpc_host import TkRPCHost
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_canvas_grid import CanvasGrid
+from graphics_braille.wx_braille_cell_list import BrailleCellList
 """
 External functions 
 Some day may model after turtle's _make_global_funcs
@@ -73,12 +73,17 @@ def setup_main(title=None, port=None):
     id_title = id_title.replace(" ", "_")
     title = id_title.replace(" ", "_")
     SlTrace.lg(f"setup_main: {id_title = }")
-    pdisplay = subprocess.Popen(f"py wx_display_main.py"
-                                f" --id_title {id_title}"
-                                f" --title {title}"
-                                f" --host_port={tkh.host_port}"
-                                f" --src_file={src_file}"
-                                 " --subprocess",
+    py_cmd = "py" if os.name == "nt" else "python3"
+    display_main_cmd = (f"{py_cmd} wx_display_main.py"
+                        f" --id_title {id_title}"
+                        f" --title {title}"
+                        f" --host_port={tkh.host_port}"
+                        f" --src_file={src_file}"
+                        " --subprocess")
+    SlTrace.lg(f"display_main_cmd:\n    {display_main_cmd}"
+               f"\n    cwd={src_dir},"
+               f"\n    shell=True")
+    pdisplay = subprocess.Popen(display_main_cmd,
                     cwd=src_dir,
                     shell=True)
     check_display()

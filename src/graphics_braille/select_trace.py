@@ -15,10 +15,10 @@ import traceback
 import difflib
 import tkinter as tk
 
-from crs_funs import str2bool, str2val
-from select_error import SelectError
-from select_report import SelectReport
-from java_properties import JavaProperties
+from graphics_braille.crs_funs import str2bool, str2val
+from graphics_braille.select_error import SelectError
+from graphics_braille.select_report import SelectReport
+from graphics_braille.java_properties import JavaProperties
 
 """
 Facilitate execution tracing / logging of execution.
@@ -122,6 +122,7 @@ class SlTrace:
         """ Clear all trace flags
         """
         cls.setupLogging()          # Insure setup
+        cls.traceFlags = {}         # Force empty  ??? Too strong?
         for flag in cls.traceFlags:
             val = cls.traceFlags[flag] 
             if isinstance(val, bool):

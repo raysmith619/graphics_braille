@@ -14,7 +14,7 @@ import threading as th
 import copy
 
 #from wx_rpc import RPCServer
-from wx_bg_rpc import RPCServer
+from graphics_braille.wx_bg_rpc import RPCServer
 from wx_rpc import RPCClient
 
 from wx_canvas_grid import CanvasGrid

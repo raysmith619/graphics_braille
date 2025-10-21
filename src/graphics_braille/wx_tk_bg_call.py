@@ -7,7 +7,8 @@ import queue
 import tkinter as tk
 import copy
 
-from select_trace import SlTrace
+import graphics_braille
+from graphics_braille.select_trace import SlTrace
 
 """ call entry """
 class BgCallEntry:

@@ -4,7 +4,7 @@
 Report to user with a modeless message
 """
 from tkinter import Tk, Label, Frame
-import tkSimpleDialog
+import graphics_braille.tkSimpleDialog as tkSimpleDialog
 
 class SelectReport(tkSimpleDialog.Dialog):
 

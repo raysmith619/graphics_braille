@@ -5,8 +5,8 @@ Useful to us
 import re 
 from functools import cmp_to_key
 
-from select_error import SelectError
-from select_error_input import SelectErrorInput
+from graphics_braille.select_error import SelectError
+from graphics_braille.select_error_input import SelectErrorInput
 ###import select_trace
 
 def anumcmp(a,b):
@@ -142,7 +142,7 @@ def str2val(string, value_or_type):
     raise SelectErrorInput(f"str2val input {string} error for type:{type(value_or_type)}")
 
 if __name__ == "__main__":
-    from select_trace import SlTrace
+    from graphics_braille.select_trace import SlTrace
     
     def test_it(lin):
         """ Test (actually exercise) on list

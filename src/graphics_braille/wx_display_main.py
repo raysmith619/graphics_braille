@@ -4,11 +4,12 @@
 import argparse
 import wx
 
-from select_trace import SlTrace
-from wx_braille_display import BrailleDisplay
-from wx_tk_rpc_user import TkRPCUser
-from wx_braille_cell_list import BrailleCellList
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_braille_display import BrailleDisplay
+from graphics_braille.wx_tk_rpc_user import TkRPCUser
+from graphics_braille.wx_braille_cell_list import BrailleCellList
 
+SlTrace.clearFlags()
 if __name__ == '__main__':      # Required because we use multiprocessing
                                 # in some modules e.g. pyttsx_proc.py
                                 #

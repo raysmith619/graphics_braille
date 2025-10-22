@@ -1,5 +1,5 @@
 #braille_cell.py    27Nov2022
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
 """
 Basis for Braille cell (6 dot pattern)

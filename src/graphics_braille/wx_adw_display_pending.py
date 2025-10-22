@@ -1,7 +1,7 @@
 #wx_adw_display_pending.py  10Mar2024  crs  Author
 import wx
 
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
 """
 AudioDrawWindow display pending

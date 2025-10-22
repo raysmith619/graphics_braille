@@ -7,11 +7,12 @@
 import multiprocessing as mp
 import time
 
-from speech_maker_cmd import SpeechMakerCmd
-#import pyttsx3 as pyttsxN    # Can use pyttsx3 instead
 import pyttsx4 as pyttsxN    # Can use pyttsx4 instead
+#import pyttsx3 as pyttsxN    # Can use pyttsx3 instead
 
-from select_trace import SlTrace
+from graphics_braille.speech_maker_cmd import SpeechMakerCmd
+
+from graphics_braille.select_trace import SlTrace
 
 class PyttsxProc:
     def __init__(self, qlen=100):    # 10 USUALY

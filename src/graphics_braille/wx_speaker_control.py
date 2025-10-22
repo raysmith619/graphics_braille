@@ -11,17 +11,19 @@ Support thread safe non-blocking speaker control:
 import threading
 import queue
 import time
-import wx
 
+import wx
 import sounddevice as sd
 
-from format_exception import format_exception
-from select_trace import SlTrace, SelectError
-from wx_play_sound_control import PlaySoundControl
-from sinewave_numpy import SineWaveNumPy
 
-from pyttsx_proc import PyttsxProc
-from speech_maker_cmd import SpeechMakerCmd
+
+from graphics_braille.format_exception import format_exception
+from graphics_braille.select_trace import SlTrace, SelectError
+from graphics_braille.wx_play_sound_control import PlaySoundControl
+from graphics_braille.sinewave_numpy import SineWaveNumPy
+
+from graphics_braille.pyttsx_proc import PyttsxProc
+from graphics_braille.speech_maker_cmd import SpeechMakerCmd
 
 
 

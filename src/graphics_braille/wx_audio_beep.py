@@ -3,10 +3,26 @@
 """ 
 Audio Support for audio_window using wxPython
 """
-import winsound
-from select_trace import SlTrace
-from wx_sinewave_beep import SineWaveBeep
+#import winsound        # NOT Available on Mac, Linux
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_sinewave_beep import SineWaveBeep
 
+# Mimic MS Windows winsound to support all Windows, Mac, Linux
+import math
+class Winsound:
+    def __init__(self, sinewave_beep):
+        self.sinewave_beep = sinewave_beep
+        
+    def Beep(self, frequency=None, duration=None):
+        """ Simulate Windows Beep function
+        :frequency: default: 440
+        :duration: 250msec
+        """
+        fref = 440
+        pitch =  12*math.log2(frequency/fref)
+        self.sinewave_beep.play_tone(pitch, dur=duration)
+        
+    
 class AudioBeep:
     beep_dur = 200      # Default beep duration
     color_fm = 1000     # Color frequency multiplier
@@ -39,6 +55,7 @@ class AudioBeep:
         self.awin = awin
         self._silence_checker = silence_checker
         self.sinewave_beep = SineWaveBeep(awin, silence_checker=silence_checker)
+        self.winsound = Winsound(self.sinewave_beep)
         self.has_sinewave = True        # TEMP - push checking deeper
 
     def announce_can_not_do(self, msg=None, val=None):
@@ -48,7 +65,7 @@ class AudioBeep:
         if self.has_sinewave:
             self.sinewave_beep.announce("can_not_do")
         else:    
-            winsound.Beep(frequency=self.color_fm//5, duration=self.beep_dur//3)
+            self.winsound.Beep(frequency=self.color_fm//5, duration=self.beep_dur//3)
 
 
     def silence(self):
@@ -68,7 +85,7 @@ class AudioBeep:
         if self.has_sinewave:
             self.sinewave_beep.announce("on_edge")
         else:
-            winsound.Beep(200, 500) 
+            self.winsound.Beep(200, 500) 
         
     def announce_pcells(self, pc_ixys, dur=None):
         """ Anounce what we're up against
@@ -134,13 +151,13 @@ class AudioBeep:
                                 "pos_tracking")
                 else:
                     freq = self.color_freqs[color]
-                winsound.Beep(freq, dur)
+                self.winsound.Beep(freq, dur)
                 SlTrace.lg(f"in cell: winsound.Beep({freq},{dur})"
                            f" cell:{cell} at {pc_ixy}", "pos_tracking")
             elif self.out_of_bounds_check(pc_ixy):
                 SlTrace.lg(f"announce_pcell({pc_ixy}) out of bounds", "bounds")
             else:
-                winsound.Beep(frequency=self.blank_freq, duration=self.blank_dur)
+                self.winsound.Beep(frequency=self.blank_freq, duration=self.blank_dur)
                 SlTrace.lg(f"blank: winsound.Beep({self.blank_freq},{self.blank_dur})"
                            f" {cell} at {pc_ixy}", "pos_tracking")
             

@@ -4,8 +4,8 @@ Create / Manipulate figure perimiters
 """
 import re 
 
-from select_trace import SlTrace
-from braille_cell import BrailleCell 
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.braille_cell import BrailleCell 
 
 
 

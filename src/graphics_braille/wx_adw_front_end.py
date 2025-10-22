@@ -10,18 +10,18 @@ from math import sqrt
 from datetime import datetime
 import time 
 
-from wx_stuff import *
-from select_trace import SlTrace
-from wx_audio_beep import AudioBeep
+from graphics_braille.wx_stuff import *
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_audio_beep import AudioBeep
 
-from braille_cell import BrailleCell
-from grid_fill_gobble import GridFillGobble
+from graphics_braille.braille_cell import BrailleCell
+from graphics_braille.grid_fill_gobble import GridFillGobble
 
-from magnify_info import MagnifySelect
-from wx_adw_menus import AdwMenus
-from wx_adw_scanner import AdwScanner
-from wx_key_cmd_proc import KeyCmdProc
-from wx_canvas_panel_item import CanvasPanelItem
+from graphics_braille.magnify_info import MagnifySelect
+from graphics_braille.wx_adw_menus import AdwMenus
+from graphics_braille.wx_adw_scanner import AdwScanner
+from graphics_braille.wx_key_cmd_proc import KeyCmdProc
+from graphics_braille.wx_canvas_panel_item import CanvasPanelItem
 
 class AdwFrontEnd:
 

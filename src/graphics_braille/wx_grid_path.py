@@ -2,9 +2,9 @@
 """
 Determine predictive following moves
 """
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
-from braille_cell import BrailleCell
+from graphics_braille.braille_cell import BrailleCell
 
 class Cell:
     @classmethod

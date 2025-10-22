@@ -3,9 +3,9 @@
 Control sound playing
 Soon to be directed to SpeakerControler
 """
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
-from play_sound import PlaySound
+from graphics_braille.play_sound import PlaySound
 
 class PlaySoundControl:
     

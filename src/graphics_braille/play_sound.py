@@ -1,7 +1,8 @@
 # play_sound.py    31Mar2023  crs, extract to move to speaker_control
 
 import datetime
-from select_trace import SlTrace
+
+from graphics_braille.select_trace import SlTrace
 try:
     from sinewave_numpy import SineWaveNumPy
     has_sinewave = True 

@@ -15,12 +15,12 @@ import copy
 
 #from wx_rpc import RPCServer
 from graphics_braille.wx_bg_rpc import RPCServer
-from wx_rpc import RPCClient
+from graphics_braille.wx_rpc import RPCClient
 
-from wx_canvas_grid import CanvasGrid
+from graphics_braille.wx_canvas_grid import CanvasGrid
 
-from select_trace import SlTrace
-from wx_tk_bg_call import TkBgCall
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_tk_bg_call import TkBgCall
 
 class TkRPCHost:
     HOST_PORT = 50010

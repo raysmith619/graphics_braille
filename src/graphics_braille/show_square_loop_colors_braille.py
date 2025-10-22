@@ -2,7 +2,7 @@
 # Display a square with colored sides
 
 ##from turtle import *		     # Get standard stuff
-from wx_turtle_braille import *		     # Get braille
+from graphics_braille.wx_turtle_braille import *		     # Get braille
 
 colors = ["red","orange","yellow","green"]
 

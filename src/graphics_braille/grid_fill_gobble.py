@@ -6,7 +6,7 @@ all adjacent ungroupped cells to to check_group,
 till no ungrouped adjacent cells can be added.
 
 """
-from grid_rot import GridRot as GR
+from graphics_braille.grid_rot import GridRot as GR
 
 class GridFillGobble:
 

@@ -9,11 +9,11 @@ import pickle
 import time
 import wx
 
-from wx_rpc import RPCClient
-from wx_rpc import RPCServer
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_rpc import RPCClient
+from graphics_braille.wx_rpc import RPCServer
 
 
-from select_trace import SlTrace
 
         
 class TkRPCUser:

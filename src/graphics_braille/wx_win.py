@@ -5,7 +5,7 @@ Reference to wx window support
 import time
 import wx
 
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
 class WxWin:
     def __init__(self, adw, title=None):

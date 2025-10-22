@@ -6,8 +6,8 @@ import atexit
 
 import wx
 
-from select_trace import SlTrace
-from wx_trace_control_pan3 import TraceControlPanel
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_trace_control_pan3 import TraceControlPanel
         
 class TraceControlWindow(wx.Frame):
     def __init__(self, tcbase=None, change_call=None):

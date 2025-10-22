@@ -11,13 +11,13 @@ import copy
 import cProfile, pstats, io         # profiling support
 import wx
 
-from wx_stuff import wx_Point
-from sinewave_numpy import SineWaveNumPy
+from graphics_braille.wx_stuff import wx_Point
+from graphics_braille.sinewave_numpy import SineWaveNumPy
 
-from select_trace import SlTrace
-from wx_canvas_panel_item import CanvasPanelItem
-from wx_sinewave_beep import SineWaveBeep
-from adw_perimeter import AdwPerimeter
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_canvas_panel_item import CanvasPanelItem
+from graphics_braille.wx_sinewave_beep import SineWaveBeep
+from graphics_braille.adw_perimeter import AdwPerimeter
 
 """
 scan path item to facilitate fast display, sound and operation

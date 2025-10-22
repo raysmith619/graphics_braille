@@ -10,10 +10,10 @@ from tkinter Canvas use to wxPython.
 """
 import time
 import wx
-from select_trace import SlTrace, SelectError
-from wx_stuff import * 
-from wx_canvas_panel_item import CanvasPanelItem            
-from wx_adw_display_pending import AdwDisplayPending
+from graphics_braille.select_trace import SlTrace, SelectError
+from graphics_braille.wx_stuff import * 
+from graphics_braille.wx_canvas_panel_item import CanvasPanelItem            
+from graphics_braille.wx_adw_display_pending import AdwDisplayPending
 
         
 class CanvasPanel(wx.Panel):

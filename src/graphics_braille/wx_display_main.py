@@ -13,7 +13,6 @@ SlTrace.clearFlags()
 if __name__ == '__main__':      # Required because we use multiprocessing
                                 # in some modules e.g. pyttsx_proc.py
                                 #
-    SlTrace.clearFlags()
     subprocess = False
     id_title = ""       # Identification title
     title = None
@@ -46,6 +45,7 @@ if __name__ == '__main__':      # Required because we use multiprocessing
     SlTrace.lg(f"wx_display_main.py after tk link setup", "tk_link")
     app = wx.App()
     SlTrace.lg(f"wx_display_main.py retrieve cell_specs", "tk_link")
+    SlTrace.clearFlags()
     cells = tkr.get_cell_specs()  # gets (ix,iy,color)*
     SlTrace.lg(f"wx_display_main.py tkr.get_cell_specs() cells: {cells}", "cell_specs")
     cell_list = BrailleCellList(cells)  # converts either to BrailleCell

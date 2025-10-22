@@ -5,7 +5,7 @@ CanvasPanel item which is used to create/recreate display
 import wx
 from wx_stuff import *
 
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
    
 """ Item to display canvas panel item

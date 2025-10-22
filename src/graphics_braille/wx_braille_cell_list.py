@@ -5,10 +5,10 @@ communication
 """
 import copy
 
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
-from braille_error import BrailleError
-from braille_cell import BrailleCell
+from graphics_braille.braille_error import BrailleError
+from graphics_braille.braille_cell import BrailleCell
 
 class BrailleCellList:
     """ List of braille cells for display

@@ -19,18 +19,18 @@ import re
 import wx
 import traceback
 
-from select_trace import SlTrace
-from wx_speaker_control import SpeakerControlLocal
-from wx_grid_path import GridPath
-from braille_cell import BrailleCell
-from magnify_info import MagnifyInfo, MagnifyDisplayRegion
-from wx_stuff import *
-from wx_adw_front_end import AdwFrontEnd
-from wx_adw_menus import AdwMenus
-from wx_canvas_panel import CanvasPanel
-from wx_braille_cell_list import BrailleCellList
-from wx_tk_rpc_user import TkRPCUser
-from wx_canvas_panel_item import CanvasPanelItem
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_speaker_control import SpeakerControlLocal
+from graphics_braille.wx_grid_path import GridPath
+from graphics_braille.braille_cell import BrailleCell
+from graphics_braille.magnify_info import MagnifyInfo, MagnifyDisplayRegion
+from graphics_braille.wx_stuff import *
+from graphics_braille.wx_adw_front_end import AdwFrontEnd
+from graphics_braille.wx_adw_menus import AdwMenus
+from graphics_braille.wx_canvas_panel import CanvasPanel
+from graphics_braille.wx_braille_cell_list import BrailleCellList
+from graphics_braille.wx_tk_rpc_user import TkRPCUser
+from graphics_braille.wx_canvas_panel_item import CanvasPanelItem
 
 class AudioDrawWindow(wx.Frame):
     def __init__(self,

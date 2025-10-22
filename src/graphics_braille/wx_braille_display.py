@@ -313,10 +313,11 @@ class BrailleDisplay:
         
 if __name__ == "__main__":
     import argparse
-    from braille_cell_text import BrailleCellText
-    from wx_braille_cell_list import BrailleCellList
-    from wx_tk_rpc_user import TkRPCUser
+    from graphics_braille.braille_cell_text import BrailleCellText
+    from graphics_braille.wx_braille_cell_list import BrailleCellList
+    from graphics_braille.wx_tk_rpc_user import TkRPCUser
     
+    SlTrace.clearFlags()
     spokes_picture="""
     ,,,,,,,,,,,iii
     ,,,,,,,,,,iiiii

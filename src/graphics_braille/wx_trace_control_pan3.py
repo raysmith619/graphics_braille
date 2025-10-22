@@ -5,8 +5,8 @@ Control buttons / flags for trace flag control window
 import wx
 import wx.lib.scrolledpanel as scrolled
 
-from select_trace import SlTrace
-from wx_trace_flag_box import TraceFlagBox
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_trace_flag_box import TraceFlagBox
 
 
 class FlagsPanel(scrolled.ScrolledPanel):

@@ -10,9 +10,9 @@ import sys
 import os
 import copy
 
-from select_trace import SlTrace
-from braille_error import BrailleError
-from magnify_info import MagnifySelect, MagnifyInfo, MagnifyDisplayRegion
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.braille_error import BrailleError
+from graphics_braille.magnify_info import MagnifySelect, MagnifyInfo, MagnifyDisplayRegion
 
 """
 We now think explicit .base.fn_name is better

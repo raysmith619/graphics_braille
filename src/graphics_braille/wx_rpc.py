@@ -6,7 +6,7 @@ import socket
 import inspect
 import traceback
 from threading import Thread
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 SIZE = 2**16
 
 

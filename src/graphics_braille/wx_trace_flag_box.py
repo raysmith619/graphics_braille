@@ -14,7 +14,7 @@ display
 """
 import re
 import wx
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
 class TraceFlagBox(wx.Panel):
     def __init__(self,

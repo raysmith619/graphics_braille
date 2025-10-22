@@ -122,7 +122,7 @@ class SlTrace:
         """ Clear all trace flags
         """
         cls.setupLogging()          # Insure setup
-        cls.traceFlags = {}         # Force empty  ??? Too strong?
+        '''
         for flag in cls.traceFlags:
             val = cls.traceFlags[flag] 
             if isinstance(val, bool):
@@ -132,6 +132,13 @@ class SlTrace:
             else:
                 cls.traceFlags[flag] = 0
         cls.traceAll = 0            # For "all" trace
+        '''
+        ### Hack based on trace_control_window
+        for flag in sorted(cls.getTraceFlags()):   # In display order
+            if type(cls.getLevel(flag)) == bool:
+                cls.setTraceFlag(flag, False)
+            elif type(cls.getLevel(flag)) == int:
+                cls.setTraceFlag(flag, 0)
 
     @classmethod
     def setAllQuiet(cls, value=True):

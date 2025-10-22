@@ -18,12 +18,12 @@ import os
 import copy
 import tkinter as tk
 
-from select_trace import SlTrace
-from braille_error import BrailleError
-from braille_cell import BrailleCell
-from magnify_info import MagnifySelect, MagnifyInfo, MagnifyDisplayRegion
-from wx_speaker_control import SpeakerControlLocal
-import canvas_copy  # To support snapshot copy
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.braille_error import BrailleError
+from graphics_braille.braille_cell import BrailleCell
+from graphics_braille.magnify_info import MagnifySelect, MagnifyInfo, MagnifyDisplayRegion
+from graphics_braille.wx_speaker_control import SpeakerControlLocal
+import graphics_braille.canvas_copy  # To support snapshot copy
 
 """
 We now think explicit .base.fn_name is better

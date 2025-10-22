@@ -1,8 +1,8 @@
 # wx_sinewave_beep.py   26Oct2023  crs, from sinewave_beep.py
 #                       26Jan2023  crs, encapsulate pysinewave
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
-from wx_speaker_control import SpeakerControlLocal
+from graphics_braille.wx_speaker_control import SpeakerControlLocal
         
 class SineWaveBeep:
         

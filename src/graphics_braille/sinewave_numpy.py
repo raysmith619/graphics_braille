@@ -8,7 +8,7 @@ import numpy as np
 import sounddevice as sd
 from pysinewave import utilities
 
-from select_trace import SlTrace
+from graphics_braille.select_trace import SlTrace
 
 class SineWaveNumPy:
     """ Gathers and plays stereo sine wave

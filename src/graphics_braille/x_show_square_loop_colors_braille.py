@@ -39,7 +39,7 @@ if len(sys.argv) > 1:
     sys.path.append(hack_dir)
 path_list = "\n    ".join(sys.path)
 print("clearFlags -  to minimize trace")
-import graphics_braille
+#import graphics_braille
 from graphics_braille.select_trace import SlTrace
 
 print(f"Final sys.path:\n    {path_list}")

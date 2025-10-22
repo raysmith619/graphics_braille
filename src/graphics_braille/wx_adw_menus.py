@@ -2,8 +2,8 @@
 
 import wx
 
-from select_trace import SlTrace
-from wx_trace_control_window import TraceControlWindow
+from graphics_braille.select_trace import SlTrace
+from graphics_braille.wx_trace_control_window import TraceControlWindow
 
 
 class MenuDisp:

@@ -8,7 +8,7 @@ import sys
 import copy
 import re
 
-from crs_funs import dot_sorted
+from  graphics_braille.crs_funs import dot_sorted
 
 class JavaProperties:
     @classmethod

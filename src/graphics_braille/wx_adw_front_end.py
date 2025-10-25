@@ -67,6 +67,7 @@ class AdwFrontEnd:
         :key_str: initial key command string default: none
         :menu_str: initial menu command string default: none
         """
+        self.speak_select = None  # Set to most recent spoken select
         self.adw = adw
         self.key_cmd_proc = KeyCmdProc(adw, key_press=self.key_press)
         canv_pan = self.canv_pan = adw.canv_pan   # set fte link
@@ -257,7 +258,43 @@ class AdwFrontEnd:
                                             #        untill refresh
         self.get_cell_bounds("mag_select", cells=cells)
         self.is_selected = True
+        self.speak_mag_selection(mag_info)
         return True
+
+    def speak_mag_selection(self, mag_info):
+        """ speak magnification selection
+        Only speak if mag_info changes to avoid
+        unseamly repitition
+        :mag_info: magnification information
+        """
+        select = mag_info.select
+        select_prev = self.speak_select
+        if select_prev is not None:
+            if (select.iy_min == select_prev.iy_min
+                and select.iy_max == select_prev.iy_max
+                and select.ix_min == select_prev.ix_min
+                and select.ix_max == select_prev.ix_max                
+                ):
+                return  # Don't speak if no change
+        row_min = select.iy_min+1
+        row_max = select.iy_max+1
+        col_min = select.ix_min+1
+        col_max = select.ix_max+1
+        text = "Magnifying selection"       # Spoken text
+        if row_min == row_max:
+            text += f" row {row_min}"
+        else:
+            text += " vertically"
+            text += f" row {row_min} through row {row_max}"
+        text += " by"
+        if col_min == col_max:
+            text += f" column {col_min}"
+        else:
+            text += " horizontally"
+            text += f" column {col_min} through column {col_max}"
+        SlTrace.lg(text)
+        self.speak_text(text, rate=120)
+        self.speak_select = select
 
     def mag_expand_to_fill(self):
         """ Expand selection region right and left by 20%
@@ -344,6 +381,7 @@ class AdwFrontEnd:
         self.canv_pan.add_item(self.adw.mag_selection_id)
         canv_pan.RefreshRect(wx.Rect(wx_Point(ul_cx1,ul_cy1),
                                      wx_Point(lr_cx2,lr_cy2)))
+        self.speak_mag_selection(mag_info)
 
     """ End of Magnify support
     """

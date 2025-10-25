@@ -3,7 +3,7 @@
 # Display a star with spokes
 
 import graphics_braille.wx_turtle_braille as tu        # Set for wxPython
-#from turtle import *    # Bring in turtle graphic functions
+#import turtle as tu    # Bring in turtle graphic functions
 tu.speed("fastest")
 colors = ["red","orange","yellow",
           "green","blue","indigo","violet"]

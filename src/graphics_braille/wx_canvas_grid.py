@@ -23,7 +23,7 @@ from graphics_braille.braille_error import BrailleError
 from graphics_braille.braille_cell import BrailleCell
 from graphics_braille.magnify_info import MagnifySelect, MagnifyInfo, MagnifyDisplayRegion
 from graphics_braille.wx_speaker_control import SpeakerControlLocal
-import graphics_braille.canvas_copy  # To support snapshot copy
+import graphics_braille as gb  # To support snapshot copy
 
 """
 We now think explicit .base.fn_name is better
@@ -823,14 +823,14 @@ class CanvasGrid(tk.Canvas):
         support tkinter.Canvas
         """
         new_copy = copy.copy(self)
-        new_base = canvas_copy.deep_copy_canvas(self.base)
+        new_base = gb.canvas_copy.deep_copy_canvas(self.base)
         new_copy.base = new_base
         return new_copy
     
     def canvas_show_items(self, exclude_types=None, show_coords=True,
                       show_options=True,
                       use_value_cache=True):
-        str = canvas_copy.canvas_show_items(self.base,
+        str = gb.canvas_copy.canvas_show_items(self.base,
                         exclude_types=exclude_types,
                         show_coords=show_coords,
                         show_options=show_options,

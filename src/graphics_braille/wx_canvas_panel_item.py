@@ -3,7 +3,7 @@
 CanvasPanel item which is used to create/recreate display
 """
 import wx
-from wx_stuff import *
+from graphics_braille.wx_stuff import *
 
 from graphics_braille.select_trace import SlTrace
 

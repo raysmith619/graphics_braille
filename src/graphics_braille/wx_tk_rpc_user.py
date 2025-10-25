@@ -12,6 +12,7 @@ import wx
 from graphics_braille.select_trace import SlTrace
 from graphics_braille.wx_rpc import RPCClient
 from graphics_braille.wx_rpc import RPCServer
+from graphics_braille.wx_canvas_grid import CanvasGrid
 
 
 
@@ -291,7 +292,6 @@ class TkRPCUser:
         """ simulate wx_spokes.py
         """
         import turtle as tur
-        from wx_canvas_grid import CanvasGrid
         sc_width = 800
         sc_height = 900
         self.sc_width = sc_width

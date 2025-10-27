@@ -26,8 +26,21 @@ py graphics_braille.x_show_square_loop_colors_braille
 ```
 In a handfull of seconds the following view should present on the screen.  If audio is working, one should hear something like "green at row 14 column 20".
 
+#### Simple test (single process, only wxPython exercised)
+Useful for debugging
+```
+py -m graphics_braille.wx_braille_display
+```
 ### graphics_braille test Screenshot
-![graphics_braille test Screenshot](Docs/graphics_braille_test_screenshot.png)
+![graphics_braille test Screenshot](https://github.com/raysmith619/graphics_braille/blob/main/Docs/graphics_braille_test_screenshot.png)
+
+#### Mac / Linux
+The following should work but have not been tested.
+```
+python3 -m graphics_braille.z_show_square_loop_colors_braille 
+python3 -m graphics_braille.wx_braille_display
+```
+
 
 ### Virtual Environment (venv)
 It's **optional**, but we us it. It's no so hard.

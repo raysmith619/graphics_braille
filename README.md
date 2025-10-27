@@ -1,6 +1,7 @@
 # Graphics Braille
-We attempt to enable blind individuals to "visualize" simple graphics produced by Python's turtle module.
-Our approach is to capture program control at the execution end and then scan the tkinter Canvas which is created.  In addition to turtle's standard graphics window, the following additions are created:
+We attempt to enable blind individuals to "visualize" simple graphics produced by simple programs using Python's turtle module.
+Our approach devides the turtle graphics screen into 40 columns by 25 rows.  We create a "text map" with a character representing the contents of each column by row square.
+In addition to turtle's standard graphics window, the following additions are created:
 * A "text picture" suitable for a low resolution physical display.
 This "text picture" is also placed in the Window clipboard to aid in placing the picture in the embosser program
 * A audio-draw-window which displays the expected braille - lower resolution(e.g. 40 x 25 braille cell) rendition of the turtle display

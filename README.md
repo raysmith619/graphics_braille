@@ -32,7 +32,12 @@ Useful for debugging
 py -m graphics_braille.wx_braille_display
 ```
 ### graphics_braille test Screenshot
+[comment]: <> (External links so figures show up in PyPI)
 ![graphics_braille test Screenshot](https://github.com/raysmith619/graphics_braille/blob/main/Docs/graphics_braille_test_screenshot.png)
+
+#### GitHub viewing
+![graphics_braille test Screenshot](Docs/graphics_braille_test_screenshot.png)
+
 
 #### Mac / Linux
 The following should work but have not been tested.

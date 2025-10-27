@@ -561,7 +561,10 @@ class AdwScanner:
                 ###if self.no_item_wait and not self.more_to_get:
                 if self.no_item_wait:
                     self.report_item(item, no_wait = True)
-                    wx.CallLater(int(self.cell_time*1000),
+                    dly = int(self.cell_time*1000)
+                    if dly <= 0:
+                        dly = 1     # Avoid <= 0
+                    wx.CallLater(dly,
                                 self.scan_path_item_complete)
                 else:
                     self.report_item(item, after=self.scan_path_item_complete)
@@ -783,7 +786,10 @@ class AdwScanner:
                 if sinewave_numpy is not None:
                     self._report_item = item
                     self.play_waveform(sinewave_numpy=sinewave_numpy)
-            wx.CallLater(int (self.cell_time*1000),
+            dly = int (self.cell_time*1000)
+            if dly <= 0:
+                dly = 1     # Avoid <= 0
+            wx.CallLater(dly,
                          self.scan_path_item_complete)
         else:
             sinewave_numpy = item.sinewave_numpy

@@ -795,7 +795,10 @@ class SpeakerControlLocal:
                     del self.cmds_awaiting_after[cmd_id]
         if len(self.cmds_awaiting_after) > 0:
             self.awaiting_loop_going = True
-            wx.CallLater(self.awaiting_loop_ms, self.awaiting_after_ck)
+            dly = self.awaiting_loop_ms
+            if dly <= 0:
+                dly = 1
+            wx.CallLater(dly, self.awaiting_after_ck)
 
     def clear_awaiting(self):
         """ Clear out awaiting, calling all awaiting

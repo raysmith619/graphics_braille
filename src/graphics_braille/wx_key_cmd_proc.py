@@ -58,7 +58,10 @@ class KeyCmdProc:
     
     def delay_next_call(self):
         SlTrace.lg("delay_next_call", "cmd")
-        wx.CallLater(int(self.dly*1000), self.do_next_command)
+        dly = int(self.dly*1000)
+        if dly <= 0:
+            dly = 1       # Avoid <= 0
+        wx.CallLater(dly, self.do_next_command)
 
     def empty(self):
         """ Test if empty (no pending cmds)

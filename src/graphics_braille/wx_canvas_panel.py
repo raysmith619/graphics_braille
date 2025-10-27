@@ -96,7 +96,9 @@ class CanvasPanel(wx.Panel):
         self.Refresh()
         self.Update()
         self.Show()
-        wx.CallLater(0, self.SetSize, (self.frame.GetSize()))
+        # It appears some wxPython versions don't accept
+        # 0 delay.
+        wx.CallLater(1, self.SetSize, (self.frame.GetSize()))
         self.Show()
         self.grid_panel.SetFocus() # Give grid_panel focus
         
@@ -154,6 +156,10 @@ class CanvasPanel(wx.Panel):
         """
         if callback is None:
             callback = self.no_call
+            # It appears some wxPython versions don't accept
+            # 0 delay.
+            if delay <= 0:
+                delay = 1
         wx.CallLater(delay, callback)
 
     def create_composite(self, disp_type=None, desc=None):
@@ -452,7 +458,10 @@ class CanvasPanel(wx.Panel):
 
         duration = 4
         self.check_proceed = False
-        wx.CallLater(duration*1000, self.set_check_proceed)
+        dly = int(duration*1000)
+        if dly <= 0:
+            dly = 1     # Avoid <= 0
+        wx.CallLater(dly, self.set_check_proceed)
         while not self.check_proceed:
             my_app = wx.App()
             wx.CallLater(10, self.my_app_kill, my_app=my_app)

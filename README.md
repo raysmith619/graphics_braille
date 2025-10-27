@@ -33,10 +33,8 @@ py -m graphics_braille.wx_braille_display
 ```
 ### graphics_braille test Screenshot
 [comment]: <> (External links so figures show up in PyPI)
-![graphics_braille test Screenshot](https://github.com/raysmith619/graphics_braille/blob/main/Docs/graphics_braille_test_screenshot.png)
-
-#### GitHub viewing
-![graphics_braille test Screenshot](Docs/graphics_braille_test_screenshot.png)
+[comment]: <> (prefix: https://github.com/raysmith619/graphics_braille/raw/main/)
+![graphics_braille test Screenshot](https://github.com/raysmith619/graphics_braille/raw/main/Docs/graphics_braille_test_screenshot.png)
 
 
 #### Mac / Linux
@@ -74,14 +72,14 @@ characters, while not being "blank" are single dot braille constructs, and are e
 
 ## A set of screen shots for a simple program
 ### Example User program in IDLE
-![IDLE program window](Docs/braille_turtle_spokes_pgm.PNG)
+![IDLE program window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_pgm.PNG)
 # turtle display window
-![turtle screen shot](Docs/braille_turtle_spokes_td.PNG)
+![turtle screen shot](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_td.PNG)
 # turtle display window - audio feedback
 Note that the color of the braille dots is for the implementer's view to empasize the color.
 Also the rectangles surrounding the dots are to further help the visual image.
 ### Braille Window - audio feedback - An implementation aid, providing the likely braille view
-![Audio Draw Window](Docs/spokes_audio_window.PNG)
+![Audio Draw Window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_audio_window.PNG)
 
 Keyboard / Menu commands
 ## Keyboard display/positioning commands
@@ -131,7 +129,7 @@ Keyboard / Menu commands
 ### Magnify supports the creation of a new audio-display-window, enlarging the currently selected region of the current audio-display-window.  The selected region is the rectangular region encompasing the currently traversed squares.
 ###Currently options t is not implemented.
 
-![Magnification Demo](Docs/Magnification_Demo.PNG)
+![Magnification Demo](https://github.com/raysmith619/graphics_braille/raw/main/Docs/Magnification_Demo.PNG)
 
 ## Navigate - Navigation commands from Navigate pulldown menu
 ```
@@ -184,7 +182,7 @@ Keyboard / Menu commands
 ```
 ### Program text printout - targeted for the brailler machine
 
-![Program printout](Docs/spokes_print_output.PNG)
+![Program printout](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_print_output.PNG)
 
 ## Supported turtle commands
 Because of our post running, screen scanning technique, we support all turtle commands, not requiring animation.  That is, we take a static snapshot at the end of the program.

@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "graphics_braille"
-version = "0.1.39.dev2"
+version = "0.1.39.dev3"
 authors = [
   { name="Ray Smith", email="raysmith619@gmail.com" },
 ]

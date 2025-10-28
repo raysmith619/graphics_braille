@@ -7,6 +7,8 @@ import queue
 import tkinter as tk
 import copy
 
+import graphics_braille.robust_queue as rq
+
 import graphics_braille
 from graphics_braille.select_trace import SlTrace
 
@@ -58,7 +60,9 @@ class TkBgCall:
         self.call_entry_d = {}          # dictionary of pending calls
         self.call_rets = {}             # Dictionary by call_num of pending call returns
         self.call_queue = queue.Queue()
+        ###self.call_queue = rq.RQueue()
         self.call_ret_queue = queue.Queue()
+        ###self.call_ret_queue = rq.RQueue()
         cell_specs = self.canvas_grid.get_cell_specs()
         SlTrace.lg(f"TkBgCall: cell_specs: {cell_specs}", "cell_specs")
         self.set_check_queue()

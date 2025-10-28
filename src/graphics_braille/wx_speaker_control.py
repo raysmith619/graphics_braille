@@ -15,7 +15,7 @@ import time
 import wx
 import sounddevice as sd
 
-
+import graphics_braille.robust_queue as rq
 
 from graphics_braille.format_exception import format_exception
 from graphics_braille.select_trace import SlTrace, SelectError
@@ -246,9 +246,11 @@ class SpeakerControl(Singleton):
         self.psc = PlaySoundControl()
         self.sound_lock = threading.Lock()
         self.cmds_in_progress = {}   # cmd ins process by cmd_id
-        self.sc_cmd_queue = queue.Queue(self.cmds_size)  # Command queue of SpeakerControlCmd
+        ###self.sc_cmd_queue = queue.Queue(self.cmds_size)  # Command queue of SpeakerControlCmd
+        self.sc_cmd_queue = rq.RQueue(self.cmds_size)  # Command queue of SpeakerControlCmd
         self.sc_cmd_thread = threading.Thread(target=self.sc_cmd_proc_thread)
-        self.sc_sound_queue = queue.Queue(self.sound_size)  # speech queue of SpeakerControlCmd 
+        ###self.sc_sound_queue = queue.Queue(self.sound_size)  # speech queue of SpeakerControlCmd 
+        self.sc_sound_queue = rq.RQueue(self.sound_size)  # speech queue of SpeakerControlCmd 
         self.sc_sound_thread = threading.Thread(target=self.sc_sound_proc_thread)
         self.sc_sound_thread.start()
         self.sc_cmd_thread.start()

@@ -13,6 +13,7 @@ import threading as th
 import queue
 import wx
 
+import graphics_braille.robust_queue as rq
 from graphics_braille.select_trace import SlTrace
 
 
@@ -29,6 +30,7 @@ class KeyCmdProc:
         self._doing_command = False     # Not processing cmd
         self._awaiting = False  # True - awaiting callback 
         self.cmd_queue = queue.Queue()  # Command queue
+        ###self.cmd_queue = rq.RQueue()  # Command queue
         self.cmd_thread = th.Thread(target=self.thread_process)
         self.cmd_thread.start()
         

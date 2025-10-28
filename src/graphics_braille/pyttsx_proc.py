@@ -7,6 +7,9 @@
 import multiprocessing as mp
 import time
 
+import graphics_braille.robust_queue as rq
+
+
 import pyttsx4 as pyttsxN    # Can use pyttsx4 instead
 #import pyttsx3 as pyttsxN    # Can use pyttsx3 instead
 
@@ -17,7 +20,7 @@ from graphics_braille.select_trace import SlTrace
 class PyttsxProc:
     def __init__(self, qlen=100):    # 10 USUALY
         """ Setup for interprocess communication
-        :qlen: input/output queue length
+        :qlen: input/output queue length ??? NOT USED
                 default: 10
         """
         self.qlen = qlen
@@ -39,8 +42,9 @@ class PyttsxProc:
         """ Setup procesing process
         """
         self.pyt_proc = mp.Process(target=self.pyt_proc_proc)
-        self.pyt_queue = mp.Queue(self.qlen)  # speech queue of SpeakerControlCmd
-        self.pyt_out_queue = mp.Queue(2*self.qlen)
+        # TBD add queue max len
+        self.pyt_queue = rq.RQueue()  # speech queue of SpeakerControlCmd
+        self.pyt_out_queue = rq.RQueue()
         self.pyt_engine_busy = False   # Updated with status
         time.sleep(1) 
         self.pyt_proc.start()

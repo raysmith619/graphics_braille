@@ -75,7 +75,11 @@ characters, while not being "blank" are single dot braille constructs, and are e
 ![IDLE program window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_pgm.PNG)
 # turtle display window
 ![turtle screen shot](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_td.PNG)
-# turtle display window - audio feedback
+
+# Text map display
+![text map display](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_to.PNG)
+
+# braille display window - with audio feedback
 Note that the color of the braille dots is for the implementer's view to empasize the color.
 Also the rectangles surrounding the dots are to further help the visual image.
 ### Braille Window - audio feedback - An implementation aid, providing the likely braille view

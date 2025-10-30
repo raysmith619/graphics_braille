@@ -1,12 +1,11 @@
 # Graphics Braille
-We attempt to enable blind individuals to "visualize" simple graphics produced by simple programs using Python's turtle module.
-Our approach devides the turtle graphics screen into 40 columns by 25 rows.  We create a "text map" with a character representing the contents of each column by row square.
+We attempt to enable blind individuals to "visualize" simple graphics produced by simple programs which use Python's turtle module.
+In our approach we devide the turtle graphics screen into 40 to 40 columns wide by 25 rows deep.  We create a "text map" with a character representing the contents of each one column by one row region.  For colored regions, we use the first letter of the region's color - r=red, o=orange, y=yellow, g==green, b==blue, i==indigo, v==violet.  For other colors we use b (black).  In general we use space for an empty region.  To avoid possible compression of multiple spaces by Braille printer software, we convert non-trailing spaces into comma(,).
 In addition to turtle's standard graphics window, the following additions are created:
-* A "text picture" suitable for a low resolution physical display.
-This "text picture" is also placed in the Window clipboard to aid in placing the picture in the embosser program
+* A "text map" suitable for a low resolution physical display.  The text map is placed in the Windows clip-board, from which it can be "pasted" into compatible applications such as a Braille printing application or a Zoom chat box for remote operation.
 * A audio-draw-window which displays the expected braille - lower resolution(e.g. 40 x 25 braille cell) rendition of the turtle display
-* The audio-draw-window supports many keyboard window positioning options, which give audio feedback of the current cursor position. The audio feedback user controlled - spoken text or audio tones.
-* The audio-draw-window supports the production of additional windows presenting magnifications of window selections.  
+* The audio-draw-window supports many keyboard based window commands which provide positioning and reporting.  These commands provide audio feedback of the current cursor position and contents. The audio feedback is user controlled with several levels of spoken text or audio tones.
+* The audio-draw-window supports the selection of a portion of the displayed area with the creation of a new audio-draw-window, displaying of the selected region in greater detail.
 
 ## Setup (MS Windows)
 * pip install from PyPI
@@ -38,7 +37,7 @@ py -m graphics_braille.wx_braille_display
 
 
 #### Mac / Linux
-The following should work but have not been tested.
+The following tests should work but have not been fully tested.
 ```
 python3 -m graphics_braille.z_show_square_loop_colors_braille 
 python3 -m graphics_braille.wx_braille_display
@@ -50,7 +49,7 @@ It's **optional**, but we us it. It's no so hard.
 As of python3 venv is a standard module and need
 not be installed.  Create the environment,
 activate the environment, do your stuff, and
-when done, deactivate.
+when done, deactivate      the environmet.
 
 
 Creating virtual environment
@@ -63,27 +62,30 @@ Leaving environment
 deactivate
 ``` 
 
-## Notable text picture modifications
+## Notable text map modifications
 These changes were the results of experiences with and comments from some 8th grade students at the Perkins School for the Blind.
 
 - Non-trailing blanks are replaced with "," characters so as not to be compressed by the braille producing software.  The ","
-characters, while not being "blank" are single dot braille constructs, and are empty view.
+characters, while not being "blank" are single dot braille constructs, provide an "empty-like" view.
 - Blank area above and to the left is reduced to facilitate viewers finding graphics objects.
 
 ## A set of screen shots for a simple program
-### Example User program in IDLE
-![IDLE program window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_pgm.PNG)
-# turtle display window
-![turtle screen shot](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_td.PNG)
+### Example User program
+![User program window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_program_code_.png)
+### turtle display window
+![turtle screen shot](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_turtle_display.png)
 
-# Text map display
-![text map display](https://github.com/raysmith619/graphics_braille/raw/main/Docs/braille_turtle_spokes_to.PNG)
+### Text map display (in clipboard)
+![text map display](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_text_map.png)
 
-# braille display window - with audio feedback
+### braille display window - with audio feedback
 Note that the color of the braille dots is for the implementer's view to empasize the color.
 Also the rectangles surrounding the dots are to further help the visual image.
 ### Braille Window - audio feedback - An implementation aid, providing the likely braille view
-![Audio Draw Window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_audio_window.PNG)
+![Audio Draw Window](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_audio_braille_window.png)
+
+### Terminal output (wordy, mostly diagnostic in nature)
+![Terminal Output](https://github.com/raysmith619/graphics_braille/raw/main/Docs/spokes_terminal_output.txt)
 
 Keyboard / Menu commands
 ## Keyboard display/positioning commands
@@ -125,6 +127,7 @@ Keyboard / Menu commands
 ```
         Help - list magnify commands (Alt-m) commands
         h - say this help message
+        r - remove position history
         t - expand magnify selected region left/right
         s - select/mark magnify region
         t - expand magnify selected region up/down top/bottom

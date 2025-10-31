@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "graphics_braille"
-version = "0.1.41"
+version = "0.1.43"
 authors = [
   { name="Ray Smith", email="raysmith619@gmail.com" },
 ]
@@ -28,7 +28,10 @@ dependencies = [
   "pyttsx4",
   "sounddevice",
   "wxpython",
+  "DistInfo-ReadMe",
 ]
+
+
 #[tool.setuptools.packages.find]
 #include = ["*.py"]
 #recursive-include = ["*"] # Include all directories
@@ -39,3 +42,9 @@ Docs = ["Docs/*.*"]
 [project.urls]
 Homepage = "https://github.com/raysmith619/graphics_braille"
 Issues = "https://github.com/raysmith619/graphics_braille/issues"
+
+[project.scripts]
+gb = "graphics_braille:gbhelp"
+gbhelp = "graphics_braille:gbhelp"
+gbreadme = "graphics_braille:gbreadme"
+gbtest = "graphics_braille:gbtest"

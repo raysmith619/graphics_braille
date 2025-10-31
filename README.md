@@ -18,10 +18,13 @@ In addition to turtle's standard graphics window, the following additions are cr
   ```
   py -m pip install graphics-braille
   ``` 
-### Installation test (MS Windows)
-Enter the following cmd in a cmd window:
+### Simple Testing / Viewing
+Terminal Commands:
 ```
-py graphics_braille.x_show_square_loop_colors_braille
+        gb, gbhelp - List graphics-braille commands
+        gbreadme - Display README.md (as seen on PyPI entry)
+        gbtest - Do simple program test
+
 ```
 In a handfull of seconds the following view should present on the screen.  If audio is working, one should hear something like "green at row 14 column 20".
 

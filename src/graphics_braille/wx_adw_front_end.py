@@ -293,7 +293,7 @@ class AdwFrontEnd:
             text += " horizontally"
             text += f" column {col_min} through column {col_max}"
         SlTrace.lg(text)
-        self.speak_text(text, rate=120)
+        self.speak_text(text, rate=180)
         self.speak_select = select
 
     def mag_expand_to_fill(self):

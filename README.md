@@ -1,12 +1,38 @@
 # Graphics Braille
 We attempt to enable blind individuals to "visualize" simple graphics produced by simple programs which use Python's turtle module.
-In our approach we devide the turtle graphics screen into 40 to 40 columns wide by 25 rows deep.  We create a "text map" with a character representing the contents of each one column by one row region.  For colored regions, we use the first letter of the region's color - r=red, o=orange, y=yellow, g==green, b==blue, i==indigo, v==violet.  For other colors we use b (black).  In general we use space for an empty region.  To avoid possible compression of multiple spaces by Braille printer software, we convert non-trailing spaces into comma(,).
+## Graphics For The Blind - History / Overview
+### How it started:
+For years, I have been introducing computer programming to the novice.  I am always searching for better examples to catch and maintain their interest and attention.  I landed on the idea of using simple programs to create simple figures such as squares or circles.  We start with a short computer program, of 8 to 12 lines in length.  This displays a multicolored square.  Then we make a small program change and see what happens.  This works nicely – for the sighted.  But what about the blind?  I developed a programming  tool which enables the blind programmer to feel this simple figure.
+### Samples
+#### For the sighted - screen shot containing the  following two “windows”:
+```
+A: Program              B:Square Display
+```
+![For the sighted - screen shot containing the  following two “windows”](https://github.com/raysmith619/graphics_braille/raw/main/Docs/GFTB_visual_example.png)
+
+           
+#### For  the blind - screen shot containing the following four “windows”:
+```
+A: Program           B: Square display
+C: Braille Depiction  D: Text created
+                        for printer
+```
+![For the blind - screen shot containing the  following two “windows”](https://github.com/raysmith619/graphics_braille/raw/main/Docs/GFTB_blind_example.png)
+  
+The screen shot above shows four windows:
+ * (A) The program adjusted for the blind
+ * (B) The displayed square as seen by the sighted
+ * (C): The depiction of the figure’s Braille rendering.
+ * (D) The text “map” which, when sent to a Braille printer, creates a touchable rendition of the figure.
+### The basic logic 
+In our approach we divide the turtle graphics screen into 32 to 40 columns wide by 25 rows deep.  We create a "text map" with a character representing the contents of each one column by one row region.  For colored regions, we use the first letter of the region's color - r=red, o=orange, y=yellow, g==green, b==blue, i==indigo, v==violet.  For other colors we use b (black).  In general we use space for an empty region.  To avoid possible compression of multiple spaces by Braille printer software, we convert non-trailing spaces into comma(,).
 In addition to turtle's standard graphics window, the following additions are created:
 * A "text map" suitable for a low resolution physical display.  The text map is placed in the Windows clip-board, from which it can be "pasted" into compatible applications such as a Braille printing application or a Zoom chat box for remote operation.
 * A audio-draw-window which displays the expected braille - lower resolution(e.g. 40 x 25 braille cell) rendition of the turtle display
 * The audio-draw-window supports many keyboard based window commands which provide positioning and reporting.  These commands provide audio feedback of the current cursor position and contents. The audio feedback is user controlled with several levels of spoken text or audio tones.
 * The audio-draw-window supports the selection of a portion of the displayed area with the creation of a new audio-draw-window, displaying of the selected region in greater detail.
 
+# Program Distribution (via pypi.org)
 ## Setup (MS Windows)
 * pip install from PyPI
   * TestPyPI
@@ -22,17 +48,23 @@ In addition to turtle's standard graphics window, the following additions are cr
 Terminal Commands:
 ```
         gb, gbhelp - List graphics-braille commands
+        gbfiles - copy user test files to Desktop/gb_exercises
         gbreadme - Display README.md (as seen on PyPI entry)
         gbtest - Do simple program test
+        gbtest2 - simple program test 2 - spokes
 
 ```
+
+### Simple Startup tests
+```
+gbtest
+```
+or
+```
+gbtest2
+```
+
 In a handfull of seconds the following view should present on the screen.  If audio is working, one should hear something like "green at row 14 column 20".
-
-#### Simple test (single process, only wxPython exercised)
-Useful for debugging
-```
-py -m graphics_braille.wx_braille_display
-```
 ### graphics_braille test Screenshot
 [comment]: <> (External links so figures show up in PyPI)
 [comment]: <> (prefix: https://github.com/raysmith619/graphics_braille/raw/main/)
@@ -65,6 +97,12 @@ Leaving environment
 deactivate
 ``` 
 
+
+#### Simple test (single process, only wxPython exercised)
+Useful for debugging
+```
+py -m graphics_braille.wx_braille_display
+```
 ## Notable text map modifications
 These changes were the results of experiences with and comments from some 8th grade students at the Perkins School for the Blind.
 

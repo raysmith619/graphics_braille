@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "graphics_braille"
-version = "0.1.45.dev55"
+version = "0.2.2"
 authors = [
   { name="Ray Smith", email="raysmith619@gmail.com" },
 ]
@@ -38,7 +38,6 @@ package-dir = {"graphics_braille" = "src/graphics_braille"}
 
 [tool.setuptools.package-data]
 "Docs" = ["../Docs/**"]
-#gb_exercises = ["gb_exercises/*"]
 
 
 [project.urls]
@@ -51,3 +50,4 @@ gbhelp = "graphics_braille:gbhelp"
 gbreadme = "graphics_braille:gbreadme"
 gbfiles = "graphics_braille:gbfiles"
 gbtest = "graphics_braille:gbtest"
+gbtest2 = "graphics_braille:gbtest2"

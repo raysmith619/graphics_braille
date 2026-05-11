@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "graphics_braille"
-version = "0.2.2"
+version = "0.2.56"
 authors = [
   { name="Ray Smith", email="raysmith619@gmail.com" },
 ]
@@ -32,12 +32,19 @@ dependencies = [
   "DistInfo-ReadMe",
 ]
 
-[tool.setuptools]
-packages = ["graphics_braille", "Docs", "gb_exercises"]
-package-dir = {"graphics_braille" = "src/graphics_braille"}
+##[tool.setuptools]
+##packages = ["graphics_braille",
+##      "graphics_braille.dot",
+##      "graphics_braille.command",
+##      "gb_exercises"]
+
+[tool.setuptools.packages.find]
+where = ["src"]  # Look for packages inside the 'src' directory
+include = ["graphics_braille*"] # Include the base package and its subpackages
 
 [tool.setuptools.package-data]
-"Docs" = ["../Docs/**"]
+##include_package_data = true
+"*" = ["Docs/*.*", "exercises/**"]
 
 
 [project.urls]

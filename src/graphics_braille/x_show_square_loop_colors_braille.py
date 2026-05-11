@@ -34,12 +34,12 @@ def remove_path_ending(ending=None):
                 
 remove_path_ending(r"\resource_lib\src")
 if len(sys.argv) > 1:
-    hack_dir = r"c:\Users\raysm\vscode\testing\venv\Lib\site-packages\graphics_braille"
+    hack_dir = r"c:\Users\raysm\vscode\testing\venv\Lib\site-packages\gb"
     print(f"adding: {hack_dir}")
     sys.path.append(hack_dir)
 path_list = "\n    ".join(sys.path)
 print("clearFlags -  to minimize trace")
-#import graphics_braille
+#import gb
 from graphics_braille.select_trace import SlTrace
 
 print(f"Final sys.path:\n    {path_list}")

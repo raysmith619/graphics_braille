@@ -1,0 +1,173 @@
+graphics_braille_show_square_gbc_OK_output.txt
+
+After some playing around AND running directly from the terminal we are successful.
+
+PS C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille> .\.venv\Scripts\Activate
+
+(.venv) PS C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille> py .\show_square_loop_colors_braille.py
+ 20260514_175506_056 Trace levels from properties file C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\show_square_loop_colors_braille.properties
+ 20260514_175506_057 Creating Log File Name: C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\log\show_square_loop_colors_braille_20260514_175506.sllog
+ setup_main: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+ display_main_cmd:
+    py wx_display_main.py --id_title File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner --title File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner --host_port=50010 --src_file=C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\show_square_loop_colors_braille.py --subprocess
+    cwd=C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille,
+    shell=True
+ Trace levels from properties file C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\wx_display_main.properties
+ Creating Log File Name: C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\log\wx_display_main_20260514_175508.sllog
+ args: Namespace(id_title='File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner', title='File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner', src_file='C:\\Users\\raysm\\vscode\\gbc\\graphics_braille\\src\\graphics_braille\\show_square_loop_colors_braille.py', bdlist=None, host_port=50010, port_inc=None, subprocess=True)
+
+ AudioDrawWindow: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+ Trace levels from properties file C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\wx_display_main.properties
+ Creating Log File Name: C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\log\wx_display_main_20260514_175513.sllog
+ green at row 14 column 19
+ print_braille: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner
+ clipboard data:
+
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner
+
+,,,ggrrrrrrrrooo
+,,ggggrrrrrrrooo
+,,ggggrrrrrrrooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,ggggyyyyyyyyyy
+,,ggggyyyyyyyyyy
+
+Doing more stuff
+
+
+ Right
+ 3 greens
+ green at row 14 column 22
+ Up
+ red at row 13 column 22
+ select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ Magnifying selection vertically row 13 through row 14 by horizontally column 19 through column 22
+ Magnifying selection vertically row 13 through row 14 by horizontally column 19 through column 22
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+
+ select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ view select: MagI[1]: select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+    top:win_fract:True x_min:0.0 y_min:0.0 x_max:1.0 y_max:1.0 ncols:40 nrows:25
+    display:win_fract:True x_min:0.0 y_min:0.0 x_max:1.0 y_max:1.0 ncols:40 nrows:25
+    no parent
+    0 children
+ create_audio_window: snapshot_num=None
+ create_audio_window: 701 cells
+ AudioDrawWindow: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+ ix:41 >= 41
+ green at row 13 column 11
+ stop_scanning
+ Magnification has 701 cells
+ print_braille: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+2 region min x: 0.45, min y: 0.48, max x: 0.55, max y: 0.56
+ clipboard data:
+
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner
+2 region min x: 0.45, min y: 0.48, max x: 0.55, max y: 0.56
+,,,,ggggggggggggggggrrrrrrrrrrrrr
+,,,,ggggggggggggggggrrrrrrrrrrrrr
+,,,ggggggggggggggggggrrrrrrrrrrrr
+,,,ggggggggggggggggggrrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+
+Viewing selected region
+
+ select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ view select: MagI[1]: select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+    top:win_fract:True x_min:0.0 y_min:0.0 x_max:1.0 y_max:1.0 ncols:40 nrows:25
+    display:win_fract:True x_min:0.0 y_min:0.0 x_max:1.0 y_max:1.0 ncols:40 nrows:25
+    no parent
+    0 children
+ create_audio_window: snapshot_num=None
+ create_audio_window: 701 cells
+ AudioDrawWindow: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+ ix:41 >= 41
+ green at row 13 column 11
+ stop_scanning
+ Magnification has 701 cells
+ print_braille: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner'
+2 region min x: 0.45, min y: 0.48, max x: 0.55, max y: 0.56
+ clipboard data:
+
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:55__User:Owner
+2 region min x: 0.45, min y: 0.48, max x: 0.55, max y: 0.56
+,,,,ggggggggggggggggrrrrrrrrrrrrr
+,,,,ggggggggggggggggrrrrrrrrrrrrr
+,,,ggggggggggggggggggrrrrrrrrrrrr
+,,,ggggggggggggggggggrrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+
+Exiting program via File > Exit
+
+ fte.pgm_exit
+ BrailleDisplay.exit
+onexit
+ Program duration: 1260.089 sec
+Executing save_propfile
+ Saving properties file  C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\wx_display_main.properties  20260514_181608
+ Closing log file C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\log\wx_display_main_20260514_175508.sllog
+ ! Client ('127.0.0.1', 52902) disconnected.
+ Subprocess exited with rc:0
+onexit
+ Program duration: 1263.595 sec
+Executing save_propfile
+ Saving properties file  C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\show_square_loop_colors_braille.properties  20260514_181609
+ 20260514_181609_437 Closing log file C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\log\show_square_loop_colors_braille_20260514_175506.sllog
+(.venv) PS C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille> 

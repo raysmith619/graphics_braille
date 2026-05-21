@@ -1,0 +1,155 @@
+graphics_braille_show_square_gbc_output.txt
+Unsuccessful run via clone - OK except no audio feedback
+
+C:\Users\raysm\vscode\graphics_braille_main\Docs
+We get: ModuleNotFoundError: No module named 'pywintypes'
+
+We're running on a GitHub clone of https://github.com/raysmith619/graphics_braille/tree/main
+working example output: graphics_braille_show_square_top_output.txt
+
+PS C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille> .\.venv\Scripts\Activate               
+(.venv) PS C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille> py .\show_square_loop_colors_braille.py
+ 20260514_170213_303 Trace levels from properties file C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\show_square_loop_colors_braille.properties
+ 20260514_170213_304 Creating Log File Name: C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\log\show_square_loop_colors_braille_20260514_170213.sllog
+ setup_main: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner'
+ display_main_cmd:
+    py wx_display_main.py --id_title File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner --title File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner --host_port=50010 --src_file=C:\Users\raysm\vscode\gbc\graphics_braille\src\graphics_braille\show_square_loop_colors_braille.py --subprocess
+    cwd=C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille,
+    shell=True
+ Trace levels from properties file C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\wx_display_main.properties
+ Creating Log File Name: C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\log\wx_display_main_20260514_170215.sllog
+ args: Namespace(id_title='File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner', title='File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner', src_file='C:\\Users\\raysm\\vscode\\gbc\\graphics_braille\\src\\graphics_braille\\show_square_loop_colors_braille.py', bdlist=None, host_port=50010, port_inc=None, subprocess=True)
+
+ AudioDrawWindow: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner'
+ Trace levels from properties file C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\wx_display_main.properties
+ green at row 14 column 19
+ Creating Log File Name: C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\log\wx_display_main_20260514_170218.sllog
+ print_braille: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner'
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner
+ clipboard data:
+
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner
+
+,,,ggrrrrrrrrooo
+,,ggggrrrrrrrooo
+,,ggggrrrrrrrooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,gggg,,,,,,,ooo
+,,ggggyyyyyyyyyy
+,,ggggyyyyyyyyyy
+
+Process Process-1:
+Traceback (most recent call last):
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyttsx4\__init__.py", line 20, in init
+    eng = _activeEngines[driverName]
+          ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\weakref.py", line 136, in __getitem__
+    o = self.data[key]()
+        ~~~~~~~~~^^^^^
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\pyttsx_proc.py", line 35, in pyt_proc_proc
+    self.engine = pyttsxN.init()
+                  ~~~~~~~~~~~~^^
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyttsx4\__init__.py", line 22, in init
+    eng = Engine(driverName, debug)
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyttsx4\engine.py", line 30, in __init__
+    self.proxy = driver.DriverProxy(weakref.proxy(self), driverName, debug)
+                 ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyttsx4\driver.py", line 50, in __init__
+    self._module = importlib.import_module(name)
+                   ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1027, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyttsx4\drivers\sapi5.py", line 11, in <module>
+    import pythoncom
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\pythoncom.py", line 2, in <module>
+    import pywintypes
+ModuleNotFoundError: No module named 'pywintypes'
+onexit
+ Program duration: 0.372 sec
+Executing save_propfile
+ Saving properties file  C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\wx_display_main.properties  20260514_170218
+ Closing log file C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\site-packages\graphics_braille\log\wx_display_main_20260514_170218.sllog
+ 9
+ green at row 13 column 20
+ 3
+ green at row 14 column 21
+ 9
+ red at row 13 column 22
+ select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ Magnifying selection vertically row 13 through row 14 by horizontally column 19 through column 22
+ Magnifying selection vertically row 13 through row 14 by horizontally column 19 through column 22
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ Selected region
+  ul_cx1: 342.0 ul_cy1: 322.0  lr_cx2: 418.0 lr_cy2: 376.0
+ view select: MagI[1]: select: ix_min:18 iy_min:12 ix_max:21 iy_max:13
+    top:win_fract:True x_min:0.0 y_min:0.0 x_max:1.0 y_max:1.0 ncols:40 nrows:25
+    display:win_fract:True x_min:0.0 y_min:0.0 x_max:1.0 y_max:1.0 ncols:40 nrows:25
+    no parent
+    0 children
+ create_audio_window: snapshot_num=None
+ create_audio_window: 701 cells
+ AudioDrawWindow: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner'
+ ix:41 >= 41
+ green at row 13 column 11
+ stop_scanning
+ Magnification has 701 cells
+ print_braille: id_title = 'File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner'
+2 region min x: 0.45, min y: 0.48, max x: 0.55, max y: 0.56
+ clipboard data:
+
+File:show_square_loop_colors_braille.py__Date:2026-05-14_17:02__User:Owner
+2 region min x: 0.45, min y: 0.48, max x: 0.55, max y: 0.56
+,,,,ggggggggggggggggrrrrrrrrrrrrr
+,,,,ggggggggggggggggrrrrrrrrrrrrr
+,,,ggggggggggggggggggrrrrrrrrrrrr
+,,,ggggggggggggggggggrrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,ggggggggggggggggggggrrrrrrrrrrr
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+,,gggggggggggggggggggg
+

@@ -8,6 +8,7 @@ Facilitates
     setting and retrieving of game controls
     persistent storage of values
 """
+import re
 from tkinter import *
 
 from graphics_braille.select_error import SelectError

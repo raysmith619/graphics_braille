@@ -4,7 +4,8 @@ from math import sqrt
 
 from graphics_braille.select_trace import SlTrace
 from graphics_braille.select_error import SelectError
-from graphics_braille.select_part import SelectPart
+
+from graphics_braille.dots.select_part import SelectPart
 
 class SelectCorner(SelectPart):
     corner_width_display = 8    # Default display size of corner in pixels

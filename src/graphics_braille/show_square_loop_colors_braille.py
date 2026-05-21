@@ -1,4 +1,4 @@
-# show_square_loop_colors_braille.py  # braille
+# show_square_loop_colors_braille.py
 # Display a square with colored sides
 
 ##from turtle import *		     # Get standard stuff

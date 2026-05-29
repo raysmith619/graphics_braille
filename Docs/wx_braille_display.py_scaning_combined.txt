@@ -1,0 +1,389 @@
+$  py -m pdb wx_braille_display.py
+> c:\users\raysm\vscode\graphics_braille_main\src\graphics_braille\wx_braille_display.py(5)<module>()
+-> """
+(Pdb) b c:/Users/Owner/AppData/Local/Programs/Python/Python313/Lib/site-packages/graphics_brai
+lle/adw_perimeter.py:484
+Breakpoint 1 at c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py:484
+(Pdb) c
+ 20260526_103615_622 Trace levels from properties file C:\users\raysm\vscode\graphics_braille_
+main\src\graphics_braille\wx_braille_display.properties
+ 20260526_103615_633 Creating Log File Name: C:\users\raysm\vscode\graphics_braille_main\src\graphics_braille\log\wx_braille_display_20260526_103615.sllog
+ args: Namespace()
+
+ AudioDrawWindow: id_title = None
+ green at row 14 column 19
+ print_braille: id_title = '???'
+Selftest
+ clipboard data:
+
+???
+Selftest
+
+,,,ggrrrrrrrroo
+,,gggrrrrrrroooo
+,,gggrrrrrrroooo
+,,ggg,,,,,,,oooo
+,,ggg,,,,,,,oooo
+,,ggg,,,,,,,oooo
+,,ggggyyyyyyyyyo
+,,ggggyyyyyyyyyy
+
+ 20260526_103617_533 Trace levels from properties file C:\users\raysm\vscode\graphics_braille_
+main\src\graphics_braille\wx_braille_display.properties
+ 20260526_103617_535 Creating Log File Name: C:\users\raysm\vscode\graphics_braille_main\src\graphics_braille\log\wx_braille_display_20260526_103617.sllog
+ start_scanning
+ Calculating scan_items
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\ad
+w_perimeter.py(484)get_surroundings()
+-> ix_min,iy_min, ix_max,iy_max = self.bounding_box_ci(
+(Pdb) n
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(485)get_surroundings()
+-> self.app.MainLoop()
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\wx\core.py(2254)MainLoop()
+-> rv = wx.PyApp.MainLoop(self)
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_menus.py(585)start_scanning()
+-> self.fte.start_scanning()
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_front_end.py(1739)start_scanning()
+-> self.scanner.start_scanning()
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(233)start_scanning()
+-> self.setup_get_scan_path()
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(243)setup_get_scan_path()
+-> self.scan_items = self.get_scan_items(cells=cells)
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(253)get_scan_items()
+-> scan_items_raw = self.get_scan_items_raw(cells=cells)
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(321)get_scan_items_raw()
+-> scan_items = self.get_perimeter_items(cells=cells)
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(348)get_perimeter_items()
+-> cell_list = adwp.get_perimeter()
+  c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(375)get_perimeter()
+-> surrounding,outside = self.get_surroundings()
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(484)get_surroundings()
+-> ix_min,iy_min, ix_max,iy_max = self.bounding_box_ci(
+(Pdb) c
+
+get_perimetr loop 1
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++::::ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo::::++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+minimize loop 1
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++::::ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo::::++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+ our_connectors:['SurroundingSquare:(17, 12)', 'SurroundingSquare:(17, 11)']
+ expansion_space:(18, 12)
+
+
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++[:]_ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo::::++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+ our_connectors:['SurroundingSquare:(29, 11)', 'SurroundingSquare:(30, 11)', 'SurroundingSquare:(31, 11)']
+ expansion_space:(31, 12)
+
+
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo[:]_++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+get_perimetr loop 2
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo++++++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+minimize loop 1
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo++++++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+minimize loop 2
+
+------------------------------------------------------------------------
+--------++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo++++++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+ start_scan
+ Add 10 new items at 0 with sound
+ Scanning vol_adj: 0.0
+ 10 cells: time: 0.001 seconds
+ Add 10 new items at 10 with sound
+ Scanning vol_adj: 0.0
+ 10 cells: time: 0.001 seconds
+ Add 10 new items at 20 with sound
+ Scanning vol_adj: 0.0
+ 10 cells: time: 0.002 seconds
+ stop_scanning
+ speech clearing
+ self.sc_cmd_queue.qsize(): 0
+ self.sc_sound_queue.qsize(): 0
+ start_scanning
+ Calculating scan_items
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(484)get_surroundings()
+-> ix_min,iy_min, ix_max,iy_max = self.bounding_box_ci(
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(484)get_surroundings()
+-> ix_min,iy_min, ix_max,iy_max = self.bounding_box_ci(
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(536)get_surroundings()->(<graphics_bra...0012331168690>, <graphics_bra...00123325DB360>)
+-> return (surrounding, outside)
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(376)get_perimeter()
+-> self.surrounding = surrounding
+(Pdb) r
+
+get_perimetr loop 1
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++::::ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo::::++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+minimize loop 1
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++::::ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo::::++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+ our_connectors:['SurroundingSquare:(17, 12)', 'SurroundingSquare:(17, 11)']
+ expansion_space:(18, 12)
+
+
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++[:]_ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo::::++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+ our_connectors:['SurroundingSquare:(29, 11)', 'SurroundingSquare:(30, 11)', 'SurroundingSquare:(31, 11)']
+ expansion_space:(31, 12)
+
+
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo[:]_++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+get_perimetr loop 2
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo++++++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+minimize loop 1
+
+------------------------------------------------------------------------
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo++++++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+
+minimize loop 2
+
+------------------------------------------------------------------------
+--------++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------
+----++++++++ggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooo++++++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++ggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrrrroooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++gggggggggggg::::::::::::::::::::::::::::oooooooooooooooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooo++++----
+----++++ggggggggggggggggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy++++----
+----++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+------------------------------------------------------------------------
+
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\adw_perimeter.py(421)get_perimeter()->[<graphics_bra...0012331160310>, <graphics_bra...0012331160890>, <graphics_bra...0012331160E10>, <graphics_bra...0012331161180>, <graphics_bra...00123311614F0>, <graphics_bra...0012331161860>, ...]
+-> return perimeter_cell_list
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(349)get_perimeter_items()
+-> scan_items = []
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(353)get_perimeter_items()->[<graphics_bra...001232E7BBED0>, <graphics_bra...001232E7BB9D0>, <graphics_bra...001232E7D1E50>, <graphics_bra...001232E7D0050>, <graphics_bra...001232E7D0190>, <graphics_bra...001232E7D0230>, ...]
+-> return scan_items
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(322)get_scan_items_raw()
+-> return scan_items
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(322)get_scan_items_raw()->[<graphics_bra...001232E7BBED0>, <graphics_bra...001232E7BB9D0>, <graphics_bra...001232E7D1E50>, <graphics_bra...001232E7D0050>, <graphics_bra...001232E7D0190>, <graphics_bra...001232E7D0230>, ...]
+-> return scan_items
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(254)get_scan_items()
+-> items_raw_left = scan_items_raw[:]    # Depleated as we go
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(304)get_scan_items()->[<graphics_bra...001232E7BBED0>, <graphics_bra...001232E7BB9D0>, <graphics_bra...001232E7D1E50>, <graphics_bra...001232E7D0050>, <graphics_bra...001232E7D0190>, <graphics_bra...001232E7D0230>, ...]
+-> return scan_items
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(244)setup_get_scan_path()
+-> self.scan_items_index = 0
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(245)setup_get_scan_path()->None
+-> self.scan_items_end = len(self.scan_items)      # < end
+(Pdb) r
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(234)start_scanning()
+-> self.more_to_get = True
+(Pdb) r
+ start_scan
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_scanner.py(236)start_scanning()->None
+-> self.start_scan()
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_front_end.py(1739)start_scanning()->None
+-> self.scanner.start_scanning()
+(Pdb) r
+--Return--
+> c:\users\owner\appdata\local\programs\python\python313\lib\site-packages\graphics_braille\wx_adw_menus.py(585)start_scanning()->None
+-> self.fte.start_scanning()
+(Pdb) r
+ Add 40 new items at 0 with sound
+ Scanning vol_adj: 0.0
+ 40 cells: time: 0.009 seconds
+ divide_path: 40 items in 2 sections
+ 0: row: 13 col: 20
+ 1: row: 20 col: 31
+ make_combine_wave: 20 items
+ make_combine_wave: 20 items
+Traceback (most recent call last):
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\Owner\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle 'AudioDrawWindow' object
+ 20260526_105236_246 Trace levels from properties file C:\users\raysm\vscode\graphics_braille_main\src\graphics_braille\wx_braille_display.properties
+ 20260526_105236_254 Creating Log File Name: C:\users\raysm\vscode\graphics_braille_main\src\graphics_braille\log\wx_braille_display_20260526_105236.sllog
+

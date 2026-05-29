@@ -623,7 +623,7 @@ class TkCanvasGrid(tk.Canvas):
         :returns: AudioDrawWindow instance or None if no cells
                 Stores number of cells found in self.n_cells_created
         """
-        from audio_draw_window import AudioDrawWindow
+        from wx_audio_draw_window import AudioDrawWindow
         from braille_cell import BrailleCell
                 
         if pgmExit is None:

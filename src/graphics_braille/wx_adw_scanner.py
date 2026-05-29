@@ -122,9 +122,10 @@ class AdwScanner:
         self.add_tone_preamble = add_tone_preamble
         self.set_combine_wave(combine_wave)
         self.n_combine_wave = n_combine_wave
+        scan_loop_checking = False      # True when alive
+        
         if space_pitch is None:
             self.space_pitch = SineWaveBeep.color2pitch("SCAN_SPACE")
-            self.scan_loop_checking = None      # set if after alive
         self.scan_coverage = scan_coverage
         self.set_scanning()
 
@@ -483,8 +484,8 @@ class AdwScanner:
         self.forward_path = []
         self.reverse_path = []
         self.current_scan_path = []     # let scan_path_item setup
-        self.scan_loop_checking = wx.CallAfter(self.scan_loop_proc)
-        wx.CallAfter(self.scan_path_item)
+        wx.CallAfter(self.scan_loop_proc)
+
 
     def scan_loop_proc(self):
         """ Keep speaker_control moderately full of scan path items
@@ -493,10 +494,11 @@ class AdwScanner:
             #while (self.get_sound_queue_size()
             #        < self.sound_queue_back_log):
             #    self.scan_path_item()
+            self.scan_loop_checking = True
             if self.get_sound_queue_size() < 1:
                 self.scan_path_item()
-            self.scan_loop_checking = wx.CallLater(self.scan_loop_proc_time_ms,
-                                                    self.scan_loop_proc)
+            wx.CallLater(self.scan_loop_proc_time_ms,
+                        self.scan_loop_proc)
 
     def stop_scan(self):
         """ Stop current scan
@@ -505,9 +507,7 @@ class AdwScanner:
             return      # Not scanning - no disrupting 
 
         self._scanning = False
-        if self.scan_loop_checking is not None:
-            self.scan_loop_checking.Stop()
-            self.scan_loop_checking = None
+        self.scan_loop_checking = False
         self.remove_display_item()
         self.remove_report_item()
         self.speaker_control.stop_scan()
@@ -588,9 +588,7 @@ class AdwScanner:
         if self.first_scan:
             self.first_scan = False
             self.wave_index = -1        # Bumped before do_wave
-            if self.scan_loop_checking is not None:
-                wx.CallAfter(self.scan_loop_checking)
-                self.scan_loop_checking = None
+            wx.CallAfter(self.scan_loop_proc)   # Start loop to keep going
             self.forward_path = self.get_more_scan_path(nitem=
                                                         len(self.scan_items),
                                                         use_sinewave_numpy=True)

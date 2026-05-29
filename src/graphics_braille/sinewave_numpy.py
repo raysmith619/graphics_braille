@@ -74,25 +74,36 @@ class SineWaveNumPy:
         sd.stop()
 
 if __name__ == "__main__":
-    pitch = 2
-    pitch_sep = 2
-    decibels_sep = 50
+    pitch = -40
+    pitch_sep = 6
+    decibels_sep = -50
     decibels_left = -50
-    decibels_right = decibels_left + decibels_sep
-    duration_s = 2
-    sw1 = SineWaveNumPy(pitch=pitch, decibels_left=decibels_left,
-                       decibels_right=decibels_right,
-                       duration_s=duration_s)
-    sw2 = SineWaveNumPy(pitch=pitch+pitch_sep, decibels_left=decibels_right,
-                       decibels_right=decibels_left,
-                       duration_s=duration_s)
-    print(f"Starting with pitch:{pitch} duration:{duration_s} sec")
-    sw1.play()
-    time.sleep(duration_s)
+    decibels_right = decibels_left
+    duration = 1
+    tone_sep = 1
+    print(f"Starting with pitch:{pitch} duration:{duration} sec")
+    for i in range(10):
+        pitch += pitch_sep
+        decibels_left += decibels_sep
+        sw_left = SineWaveNumPy(pitch=pitch,
+                    decibels_left=decibels_left,
+                    decibels_right=0,
+                    duration=duration)
+        sw_left.play()
+        time.sleep(duration)
+        sw_right = SineWaveNumPy(pitch=pitch,
+                    decibels_right=decibels_left,
+                    decibels_left=0,
+                    duration=duration)
+        sw_right.play()
+        time.sleep(duration)
+    '''
+    time.sleep(duration)
     sw1.stop()
     print("End of sw1")
-    time.sleep(1)
+    time.sleep(duration)
     sw2.play()
-    time.sleep(duration_s)
+    time.sleep(duration)
     sw2.stop()
     print("End of sw2")
+    '''

@@ -316,7 +316,9 @@ class TkRPCUser:
         """ simulate empty screen
         """
         import turtle as tur
-        from wx_canvas_grid import CanvasGrid
+        
+        from graphics_braille.wx_canvas_grid import CanvasGrid
+        
         sc_width = 800
         sc_height = 900
         self.sc_width = sc_width
@@ -330,7 +332,7 @@ class TkRPCUser:
         """ simulate wx_square_colors.py
         """
         import turtle as tur
-        from wx_canvas_grid import CanvasGrid
+        from graphics_braille.wx_canvas_grid import CanvasGrid
         sc_width = 800
         sc_height = 900
         self.sc_width = sc_width

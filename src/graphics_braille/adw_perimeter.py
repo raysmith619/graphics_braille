@@ -995,8 +995,8 @@ class AdwPerimeter:
     
     
 if __name__ == "__main__":
-    from braille_cell_text import BrailleCellText
-    from audio_draw_window import AudioDrawWindow
+    from graphics_braille.braille_cell_text import BrailleCellText
+    from graphics_braille.wx_audio_draw_window import AudioDrawWindow
     
     ts1_str = """
     
@@ -1108,4 +1108,4 @@ if __name__ == "__main__":
     test_it(figure_str=ts3_str, desc="spokes")    
     test_it(figure_str=ts4_str, desc="square colors")    
 
-    adw.mainloop()          # To keep AudioDrawWindow responsive
+    adw.MainLoop()          # To keep AudioDrawWindow responsive

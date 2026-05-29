@@ -890,7 +890,7 @@ if __name__ == "__main__":
     
     if add_menus:
         # Provide Menubar to capture Alt-<key>s
-        from wx_adw_menus import AdwMenus, FteFake
+        from graphics_braille.wx_adw_menus import AdwMenus, FteFake
         
     SlTrace.clearFlags()
     #SlTrace.setFlags("paint")

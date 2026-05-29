@@ -2286,9 +2286,9 @@ if __name__ == '__main__':
         def bounding_box_ci(self, cells):
             return (100,100, 0, 0)                
     '''
-    from wx_audio_draw_window import AudioDrawWindow
-    from wx_adw_menus import AdwMenus
-    from wx_tk_rpc_user import TkRPCUser
+    from graphics_braille.wx_audio_draw_window import AudioDrawWindow
+    from graphics_braille.wx_adw_menus import AdwMenus
+    from graphics_braille.wx_tk_rpc_user import TkRPCUser
                   
     app = wx.App()
     frame = wx.Frame(None)

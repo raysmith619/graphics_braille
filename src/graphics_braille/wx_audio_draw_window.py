@@ -181,6 +181,9 @@ class AudioDrawWindow(wx.Frame):
             win_width = 800
         if win_height is None:
             win_height = 800
+        if title is None:
+            title = "AudioDrawWindow"
+
         super().__init__(None, title=title,
                          size=wx.Size(win_width, win_height))
         self.cells = {}         # Dictionary of cells by (ix,iy)

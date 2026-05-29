@@ -842,7 +842,7 @@ if __name__ == "__main__":
     import time
     import tkinter as tk
     import wx
-    from wx_audio_draw_window import AudioDrawWindow
+    from graphics_braille.wx_audio_draw_window import AudioDrawWindow
     app = wx.App()
     
     def test1():

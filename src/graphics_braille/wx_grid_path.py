@@ -221,7 +221,7 @@ class GridPath:
         
 
 if __name__ == "__main__":
-    from audio_draw_window import AudioDrawWindow
+    from graphics_braille.wx_audio_draw_window import AudioDrawWindow
     awin = AudioDrawWindow(title="grid_path self test")
 
     print(f"Self Test: {__file__}")

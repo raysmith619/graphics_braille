@@ -37,7 +37,7 @@ class WxWin:
         wx.Yield()
                         
 if __name__ == "__main__":
-    from wx_audio_draw_window import AudioDrawWindow
+    from graphics_braille.wx_audio_draw_window import AudioDrawWindow
     
     #adw = AudioDrawWindow(setup_wx_win=False)
     adw = None

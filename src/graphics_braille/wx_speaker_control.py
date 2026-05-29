@@ -861,7 +861,8 @@ if __name__ == "__main__":
     import time
     import multiprocessing
     multiprocessing.freeze_support()
-    from wx_win import WxWin
+    
+    from graphics_braille.wx_win import WxWin
     adw = None
     wx_win = WxWin(adw, "wx_speaker_control Self Test")
     for simple_speaker in [True, False]:

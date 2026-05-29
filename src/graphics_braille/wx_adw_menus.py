@@ -694,7 +694,7 @@ class FteFake:
 
 
 if __name__ == "__main__":
-    from wx_adw_menus import AdwMenus, FteFake
+    from graphics_braille.wx_adw_menus import AdwMenus, FteFake
                   
     app = wx.App()
     frame = wx.Frame(None)

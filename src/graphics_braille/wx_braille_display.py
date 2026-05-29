@@ -343,6 +343,19 @@ if __name__ == "__main__":
     ,,,,,,,,,,yyyyy
     ,,,,,,,,,,,yyy
     """
+
+    
+    spokes_picture="""
+    ,,,,,,,,,,ggrrrrroo
+    ,,,,,,,,,gggrrrrrooo
+    ,,,,,,,,,ggg,,,,,oooo
+    ,,,,,,,,,ggg,,,,,oooo
+    ,,,,,,,,,ggg,,,,,oooo
+    ,,,,,,,,,gggyyyyyyyy
+    ,,,,,,,,,,ggyyyyyyy
+    """
+    
+    
     spokes_bct = BrailleCellText(text=spokes_picture)
     spokes_cells = spokes_bct.get_cells()
     spokes_bcs = BrailleCellList(spokes_cells).to_string()
@@ -350,7 +363,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     args = parser.parse_args()             # or die "Illegal options"
     SlTrace.lg(f"args: {args}\n")
-    tkr = TkRPCUser(simulated=True)
+    tkr = TkRPCUser(simulated=True, figure=2)
 
     bd = BrailleDisplay(tkr=tkr, src_file=__file__,
                         display_list=spokes_bcs)
